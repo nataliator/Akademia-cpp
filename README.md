@@ -1,3 +1,3 @@
-My first steps in coding.
+My first steps in C++
 
 Natalia
