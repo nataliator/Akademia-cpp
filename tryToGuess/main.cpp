@@ -11,6 +11,11 @@ int main()
     int ans3;
     int compAns;
 
+    int guess;
+    int guessCount = 0;
+    int guessLimit = 3;
+    bool outOfGuesses = false;
+
     cout << "Try to guess the number I have chosen. Please make a choice. For positive numbers press 3, for negative numbers press your favorite number, but not 3 " << endl;
     cin >> ans1;
     srand( time( NULL ) );
@@ -42,11 +47,32 @@ int main()
         || (ans2 == 7 && 51 <= compAns))
 
         && ((ans3 == 6 && compAns % 2 ==0)
-            || (ans3 != 6 && compAns % 2 != 0)))
+            || (ans3 != 6 && compAns % 2 != 0))){
 
-        cout << "Bravo! Excellent choice! The number is: "<<compAns << endl;
-         else
-           cout << "I am sorry, but you were wrong. The number is: " << compAns << endl;
+            cout << "Bravo! You're doing great!Your all choices were wright. Now please guess the number, you have 3 trials: " << endl;
+
+
+                while(compAns != guess && !outOfGuesses){
+                if(guessCount < guessLimit){
+                cout << "Enter guess: ";
+                cin >> guess;
+                guessCount++;
+                } else {
+                outOfGuesses = true;
+                }
+                }
+
+                if(outOfGuesses){
+                cout << "You were really close. The number is: " << compAns << endl;
+
+                } else{
+                cout << "Bravo! Excellent choice! The number is: "<<compAns << endl;
+                }}
+      else
+
+     cout << "I am sorry, but you were wrong. The number is: " << compAns << endl;
+
+
 
      return 0;
 
