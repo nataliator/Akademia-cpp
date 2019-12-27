@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1577284797 source:c:\users\user\desktop\c++\tryguess\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
