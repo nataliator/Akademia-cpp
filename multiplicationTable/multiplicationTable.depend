@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1577747288 source:c:\users\user\desktop\c++\multiplicationtable\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+
