@@ -18,7 +18,7 @@ int main()
 
     cout << "First number is: "<< num1 << endl;
     cout << "Second number is: "<< num2 << endl;
-    cout << "Please multiply these numbers and enter the answer: " << endl;
+    cout << "Please multiply these numbers and then enter the answer: " << endl;
     cin >> userAns;
     int product = num1*num2;
     if (userAns == product){
