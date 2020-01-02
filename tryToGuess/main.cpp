@@ -61,7 +61,7 @@ int main(){
     bool isUserAnsPositive = (ans1 == 3);
 
     if(!isUserAnsPositive && !isCompAnsPositive(compAns)) {
-        cout << "Choose a range: from - 100 to - 51 press 4, or from - 50 to 0 press 5" << endl;
+        cout << "Choose a range: from - 100 to - 51 press 4, or from - 50 to -1 press 5" << endl;
     } else{
         if(isUserAnsPositive && isCompAnsPositive(compAns)) {
             cout << "Choose a range: from 0 to 50 press 6, or from 51 to 100 press 7 " << endl;
@@ -85,6 +85,13 @@ int main(){
 
     bool isUserAnsEven = ans3 == 6;
     bool isCompAnsEven = compAns % 2 ==0;
+
+
+    /*There are 4 ranges:
+      range 1 from -100 to -51, then ans2 = 4
+      range 2 from -50 to -1, then ans2 = 5
+      range 3 from 0 to 50, then ans2 = 6
+      range 4 from 51 to 100, then ans2 = 7 */
 
     if (((ans2 == 4 && compAns <= -51)
         || (ans2 == 5 && -50 < compAns && !isCompAnsPositive(compAns))
