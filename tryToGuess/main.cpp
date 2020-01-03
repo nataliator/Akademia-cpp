@@ -60,21 +60,17 @@ int main(){
 
     bool isUserAnsPositive = (ans1 == 3);
 
-    if(!isUserAnsPositive && !isCompAnsPositive(compAns)) {
+    if(!isUserAnsPositive) {
         cout << "Choose a range: from - 100 to - 51 press 4, or from - 50 to -1 press 5" << endl;
     } else{
-        if(isUserAnsPositive && isCompAnsPositive(compAns)) {
-            cout << "Choose a range: from 0 to 50 press 6, or from 51 to 100 press 7 " << endl;
-        } else{
-            cout << "You are already wrong, but press some number to continue " << endl;
-        }
 
+            cout << "Choose a range: from 0 to 50 press 6, or from 51 to 100 press 7 " << endl;
     }
 
     cin >> ans2;
 
-    while((ans2OutOfNegativeRange(ans2) && !isUserAnsPositive && !isCompAnsPositive(compAns))
-         ||(ans2OutOfPositiveRange(ans2) && isUserAnsPositive && isCompAnsPositive(compAns))) {
+    while((ans2OutOfNegativeRange(ans2) && !isUserAnsPositive)
+         ||(ans2OutOfPositiveRange(ans2) && isUserAnsPositive)) {
         cout << "Please read carefully, how to choose the range. Try again." << endl;
         cin >> ans2;
     };
@@ -85,6 +81,40 @@ int main(){
 
     bool isUserAnsEven = ans3 == 6;
     bool isCompAnsEven = compAns % 2 ==0;
+
+    string userAnsResume[3];
+    if (isUserAnsPositive){
+        userAnsResume[0] = "positive numbers, ";
+    }
+    else {
+        userAnsResume[0] = "negative numbers, ";
+    }
+
+    switch(ans2){
+        case 4:
+            userAnsResume[1] = "from -100 to -51, ";
+            break;
+        case 5:
+            userAnsResume[1] = "from - 50 to -1, ";
+            break;
+        case 6:
+            userAnsResume[1] = "from 0 to 50, ";
+            break;
+        case 7:
+            userAnsResume[1] = "from 51 to 100, ";
+
+    }
+
+    if (isUserAnsEven){
+        userAnsResume[2] = "even numbers. ";
+    }else {
+        userAnsResume[2] = "odd numbers. ";
+    }
+
+    cout << "Until now you chose: \n";
+    for(int i = 0;i < 3;i++){
+        cout << userAnsResume[i] << endl;
+    }
 
 
     /*There are 4 ranges:
