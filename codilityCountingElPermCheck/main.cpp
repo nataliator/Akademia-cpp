@@ -4,11 +4,11 @@ using namespace std;
 
 int solution(vector<int> &A){
     int Asize = A.size();
-    int permutationCheck[Asize + 1];
+    int permutationCheck[Asize];
     int counter = 0;
     int result = 0;
 
-    for(int i = 0; i < Asize + 1;i++){
+    for(int i = 0; i <= Asize;i++){
         permutationCheck[i] = 0;
     }
     for(int i = 0;i < Asize; i++){
@@ -19,8 +19,6 @@ int solution(vector<int> &A){
         }
         if(permutationCheck[A[i]] ==0 ){
             counter++;
-            cout << counter << "counter" <<endl;
-
         }
         permutationCheck[A[i]] = 1;
         if(counter == Asize){
