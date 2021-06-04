@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1578011803 source:c:\users\user\desktop\c++\atrytoguess\main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-
